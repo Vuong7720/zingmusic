@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/valiable.css">
+    <title>Music</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="sidebar_app">
+            <div class="logo_app">
+                <a href="#" class="logo_link">
+                    <img src="./img/main-logo.svg" alt="" class="logo_img mt-2">
+                </a>
+            </div>
+            <div class="sidebar">
+                <div class="nav_main">
+                    <ul class="nav flex-column">
+                        <li class="nav_item_customer nav-item">
+                            <a class="nav_link_cutome nav-link" href="#"><i class="fa-solid fa-city"></i> Cá
+                                Nhân</a>
+                        </li>
+                        <li class="nav_item_customer nav-item">
+                            <a class="nav_link_cutome nav-link" href="#"><i
+                                    class="fa-solid fa-compact-disc"></i> Khám Phá</a>
+                        </li>
+                        <li class="nav_item_customer nav-item">
+                            <a class="nav_link_cutome nav-link" href="#"><i class="fa-solid fa-table-list"></i>
+                                #Zingchart</a>
+                        </li>
+                        <li class="nav_item_customer nav-item">
+                            <a class="nav_link_cutome nav-link" href="#"><i class="fa-solid fa-radio"></i>
+                                Radio</a>
+                        </li>
+                        <li class="nav_item_customer nav-item">
+                            <a class="nav_link_cutome nav-link" href="#"><i class="fa-solid fa-floppy-disk"></i>
+                                Theo Dõi</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="nav_sp">
+                    <ul class="sidebar_mid" id="scroll_01">
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#"><i class="fa-solid fa-music"></i> Nhạc
+                                mới</a>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#"><i class="fa-solid fa-icons"></i> Thể
+                                Loại</a>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#"><i class="fa-regular fa-star"></i> Top
+                                100</a>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#"><i class="fa-solid fa-video"></i>
+                                MV</a>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#">AD</a>
+                        </li>
+                        <li class="nav_item_customer thuvien">
+                            <span>Thư Viện</span>
+                            <i class="fa-solid fa-pencil"></i>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#"><i class="fa-solid fa-guitar"></i> Bài
+                                hát</a>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#"><i
+                                    class="fa-solid fa-bars-staggered"></i> Playlist</a>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#"><i class="fa-regular fa-clock"></i> Gần
+                                đây</a>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#">Tháng 1</a>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#">Nhạc Quốc Tế</a>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#">Chủ đề hot</a>
+                        </li>
+                        <li class="nav_item_customer">
+                            <a class="nav_link_cutome nav-link" href="#">#fandom</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="btn_create_playlist">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="">Tạo playlist mới</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-2">
+                
+            </div>
+
+            <div class="col-xl-10">
+                <div class="nav_main_top sticky-top">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="control_top mr-4">
+                            <a href="" class="ctrl_link"><i class="fa-solid fa-angles-left"></i></a>
+                            <a href="" class="ctrl_link"><i class="fa-solid fa-angles-right"></i></a>
+                        </div>
+                        <form class="frm_inline form-inline" action="">
+                            <div class="ip_group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="ip_gr_text input-group-text"><i
+                                            class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                                <input type="text" class="ip_search form-control" placeholder="Tìm kiếm">
+                            </div>
+                        </form>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item active">
+                                    <a class="nav_top_link_cutomer nav-link" href="#"><i
+                                            class="fa-solid fa-shirt"></i><span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav_top_link_cutomer nav-link" href="#"><i
+                                            class="fa-solid fa-upload"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav_top_link_cutomer nav-link" href="#"><i
+                                            class="fa-solid fa-gear"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav_top_link_cutomer nav-link" href="#">
+                                        <img src="/img/avata.jpeg" class="avata_account rounded-circle"
+                                            alt="Cinque Terre">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- content-main ---------------------------------------->
+
+                <div class="about_user">
+                    <div class="info_user">
+                        <div class="row">
+                            <div class="col-xl-4"></div>
+                            <!-- --- -->
+                            <div class="col-xl-4">
+                                <div class="info_user_cli hight_light text-center">
+                                    <a href="" class="avata_user_link">
+                                        <img src="/img/avata.jpeg" alt="" class="avata_user_img rounded-circle">
+                                    </a>
+                                    <div class="name_user_info">
+                                        Phạm Quốc Vương
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- --- -->
+                            <div class="col-xl-4">
+                                <div class="more_btn_sevice text-right mr-4">
+                                    <a href="" class="buy_vip btn_vip">MUA VIP NGAY</a>
+                                    <a href="" class="btn_vip btn_nor">NHẬP CODE VIP</a>
+                                    <a href="" class="btn_vip btn_nor"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- --------nav_content_main -->
+                <div class="nav_content_main">
+                    <div class="nav_content_all">
+                        <nav class="nav_content_all_nav">
+                            <div class="nav_content_all_customer nav nav-tabs justify-content-center" id="nav-tab"
+                                role="tablist">
+                                <a class="nav_content_item_customer1 nav-item nav-link active" data-toggle="tab"
+                                    href="#tongquan" role="tab" aria-controls="tongquan" aria-selected="true">TỔNG
+                                    QUAN</a>
+                                <a class="nav_content_item_customer1 nav-item nav-link" data-toggle="tab" href="#baihat"
+                                    role="tab" aria-controls="baihat" aria-selected="false">BÀI HÁT</a>
+                                <a class="nav_content_item_customer1 nav-item nav-link" data-toggle="tab"
+                                    href="#playlist" role="tab" aria-controls="playlist"
+                                    aria-selected="false">PLAYLIST</a>
+                                <a class="nav_content_item_customer1 nav-item nav-link" data-toggle="tab" href="#abum"
+                                    role="tab" aria-controls="abum" aria-selected="false">ABUM</a>
+                                <a class="nav_content_item_customer1 nav-item nav-link" data-toggle="tab" href="#mv"
+                                    role="tab" aria-controls="mv" aria-selected="false">MV</a>
+                                <a class="nav_content_item_customer1 nav-item nav-link" data-toggle="tab" href="#nghesi"
+                                    role="tab" aria-controls="nghesi" aria-selected="false">NGHỆ SĨ</a>
+                                <a class="nav_content_item_customer1 nav-item nav-link" data-toggle="tab" href="#tailen"
+                                    role="tab" aria-controls="tailen" aria-selected="false">TẢI LÊN</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content mt-4" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="tongquan">
+                                <div class="baihat mt-2">
+                                    <div class="all_title">
+                                        <div class="title_name_content">
+                                            Bài Hát <i class="fa-solid fa-angles-right"></i>
+                                        </div>
+                                        <div class="title_btn_content">
+                                            <a href="" class="tailen">Tải Lên</a>
+                                            <a href="" class="tailen play_all">Phát Tất Cả</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-2 col-lg-2">
+                                            <img src="/img/iu2.jpeg" alt="" class="slide1">
+                                        </div>
+                                        <div class="col-xl-10 col-lg-10">
+                                            <ul class="list_song_content mt-2" id="scroll_01">
+                                                <li class="list_song_content_item act_bor align-items-center">
+                                                    <div class="song_play_info song_play_info_bh align-items-center">
+                                                        <a href="" class="cd_logo_song">
+                                                            <img src="/img/iu1.jpeg" alt=""
+                                                                class="img_logo_song bor10 bod">
+                                                        </a>
+                                                        <div class="song_info_detai">
+                                                            <div class="name_song_footer">
+                                                                Cứ Chill Thôi
+                                                            </div>
+                                                            <p class="singer_song_footer">
+                                                                IU
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time_song">04:30</div>
+                                                    <div class="btn_list_song text-right">
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-microphone"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list_song_content_item align-items-center">
+                                                    <div class="song_play_info song_play_info_bh align-items-center">
+                                                        <a href="" class="cd_logo_song">
+                                                            <img src="/img/iu1.jpeg" alt=""
+                                                                class="bod img_logo_song bor10">
+                                                        </a>
+                                                        <div class="song_info_detai">
+                                                            <div class="name_song_footer">
+                                                                Cứ Chill Thôi
+                                                            </div>
+                                                            <p class="singer_song_footer">
+                                                                IU
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time_song">04:30</div>
+                                                    <div class="btn_list_song text-right">
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-microphone"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list_song_content_item align-items-center">
+                                                    <div class="song_play_info song_play_info_bh align-items-center">
+                                                        <a href="" class="cd_logo_song">
+                                                            <img src="/img/iu1.jpeg" alt=""
+                                                                class="img_logo_song bor10 bod">
+                                                        </a>
+                                                        <div class="song_info_detai">
+                                                            <div class="name_song_footer">
+                                                                Cứ Chill Thôi
+                                                            </div>
+                                                            <p class="singer_song_footer">
+                                                                IU
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time_song">04:30</div>
+                                                    <div class="btn_list_song text-right">
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-microphone"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list_song_content_item align-items-center">
+                                                    <div class="song_play_info song_play_info_bh align-items-center">
+                                                        <a href="" class="cd_logo_song">
+                                                            <img src="/img/iu1.jpeg" alt=""
+                                                                class="img_logo_song bor10 bod">
+                                                        </a>
+                                                        <div class="song_info_detai">
+                                                            <div class="name_song_footer">
+                                                                Cứ Chill Thôi
+                                                            </div>
+                                                            <p class="singer_song_footer">
+                                                                IU
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time_song">04:30</div>
+                                                    <div class="btn_list_song text-right">
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-microphone"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list_song_content_item align-items-center">
+                                                    <div class="song_play_info song_play_info_bh align-items-center">
+                                                        <a href="" class="cd_logo_song">
+                                                            <img src="/img/iu1.jpeg" alt=""
+                                                                class="img_logo_song bor10 bod">
+                                                        </a>
+                                                        <div class="song_info_detai">
+                                                            <div class="name_song_footer">
+                                                                Cứ Chill Thôi
+                                                            </div>
+                                                            <p class="singer_song_footer">
+                                                                IU
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time_song">04:30</div>
+                                                    <div class="btn_list_song text-right">
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-microphone"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list_song_content_item align-items-center">
+                                                    <div class="song_play_info song_play_info_bh align-items-center">
+                                                        <a href="" class="cd_logo_song">
+                                                            <img src="/img/iu1.jpeg" alt=""
+                                                                class="img_logo_song bor10 bod">
+                                                        </a>
+                                                        <div class="song_info_detai">
+                                                            <div class="name_song_footer">
+                                                                Cứ Chill Thôi
+                                                            </div>
+                                                            <p class="singer_song_footer">
+                                                                IU
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time_song">04:30</div>
+                                                    <div class="btn_list_song text-right">
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-microphone"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list_song_content_item align-items-center">
+                                                    <div class="song_play_info song_play_info_bh align-items-center">
+                                                        <a href="" class="cd_logo_song">
+                                                            <img src="/img/iu1.jpeg" alt=""
+                                                                class="img_logo_song bor10 bod">
+                                                        </a>
+                                                        <div class="song_info_detai">
+                                                            <div class="name_song_footer">
+                                                                Cứ Chill Thôi
+                                                            </div>
+                                                            <p class="singer_song_footer">
+                                                                IU
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time_song">04:30</div>
+                                                    <div class="btn_list_song text-right">
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-microphone"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                        <a href="" class="btn_list_song_link">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="baihat mt-2">
+                                    <div class="all_title">
+                                        <div class="title_name_content">
+                                            PLAYLIST <i class="fa-solid fa-angles-right"></i>
+                                        </div>
+                                        <div class="title_btn_content">
+                                            <a href="" class="tailen"><i class="fa-solid fa-chevron-left"></i></a>
+                                            <a href="" class="tailen play_all"><i class="fa-solid fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                                   <div class="playlist_set" id="playlit_set1">
+                                    <div class="row justify-content-between">
+                                        <div class="col-xl-2 col-lg-2">
+                                            <div class="create_playlist align-items-center text-center">
+                                                <div class="btn_cre_playlis">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                    <p>Thêm Playlist</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-2">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript">
+                                                <div class="name_playlist">
+                                                    V-Pop: The A-List
+                                                </div>
+                                                <div class="author_playlist">
+                                                    Sơn Tùng
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript">
+                                                <div class="name_playlist">
+                                                    V-Pop: The A-List
+                                                </div>
+                                                <div class="author_playlist">
+                                                    Sơn Tùng
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript">
+                                                <div class="name_playlist">
+                                                    V-Pop: The A-List
+                                                </div>
+                                                <div class="author_playlist">
+                                                    Sơn Tùng
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript">
+                                                <div class="name_playlist">
+                                                    V-Pop: The A-List
+                                                </div>
+                                                <div class="author_playlist">
+                                                    Sơn Tùng
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                                </div>
+                                <div class="baihat mt-2">
+                                    <div class="all_title">
+                                        <div class="title_name_content">
+                                            Album <i class="fa-solid fa-angles-right"></i>
+                                        </div>
+                                        <div class="title_btn_content">
+                                            <a href="" class="tailen"><i class="fa-solid fa-chevron-left"></i></a>
+                                            <a href="" class="tailen play_all"><i class="fa-solid fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                                   <div class="playlist_set" id="playlit_set1">
+                                    <div class="row justify-content-between">
+                                        <div class="col-xl-2 col-lg-2">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript">
+                                                <div class="name_playlist">
+                                                    V-Pop: The A-List
+                                                </div>
+                                                <div class="author_playlist">
+                                                    Sơn Tùng
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript">
+                                                <div class="name_playlist">
+                                                    V-Pop: The A-List
+                                                </div>
+                                                <div class="author_playlist">
+                                                    Sơn Tùng
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript">
+                                                <div class="name_playlist">
+                                                    V-Pop: The A-List
+                                                </div>
+                                                <div class="author_playlist">
+                                                    Sơn Tùng
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript">
+                                                <div class="name_playlist">
+                                                    V-Pop: The A-List
+                                                </div>
+                                                <div class="author_playlist">
+                                                    Sơn Tùng
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript">
+                                                <div class="name_playlist">
+                                                    V-Pop: The A-List
+                                                </div>
+                                                <div class="author_playlist">
+                                                    Sơn Tùng
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                                </div>
+                                <div class="baihat mt-2">
+                                    <div class="all_title">
+                                        <div class="title_name_content">
+                                            MV <i class="fa-solid fa-angles-right"></i>
+                                        </div>
+                                        <div class="title_btn_content">
+                                            <a href="" class="tailen"><i class="fa-solid fa-chevron-left"></i></a>
+                                            <a href="" class="tailen play_all"><i class="fa-solid fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                                   <div class="playlist_set" id="playlit_set1">
+                                    <div class="row justify-content-between">
+                                        <div class="col-xl-4 col-lg-3">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img pl_big_mv">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript playlist_descript_custor">
+                                                <img src="/img/avata.jpeg" alt="" class="rounded-circle customer_pl_descript">
+                                                <div class="playlist_descript_detai">
+                                                    <h3 class="">Một bước yêu vạn dặm đau</h3>
+                                                    <p>Mr.siro</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-3">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img pl_big_mv">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript playlist_descript_custor">
+                                                <img src="/img/avata.jpeg" alt="" class="rounded-circle customer_pl_descript">
+                                                <div class="playlist_descript_detai">
+                                                    <h3 class="">Một bước yêu vạn dặm đau</h3>
+                                                    <p>Mr.siro</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-3">
+                                            <div class="playlist_content_sup">
+                                                <a href="" class="playlist_link_img">
+                                                    <img src="/img/iu1.jpeg" alt="" class="playlist_img pl_big_mv">
+                                                </a>
+                                            </div>
+                                            <div class="playlist_descript playlist_descript_custor">
+                                                <img src="/img/avata.jpeg" alt="" class="rounded-circle customer_pl_descript">
+                                                <div class="playlist_descript_detai">
+                                                    <h3 class="">Một bước yêu vạn dặm đau</h3>
+                                                    <p>Mr.siro</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                   </div>
+                                </div>
+                                <div class="baihat baihat1 mt-2 mb-5">
+                                    <div class="all_title">
+                                        <div class="title_name_content">
+                                            Nghệ Sĩ <i class="fa-solid fa-angles-right"></i>
+                                        </div>
+                                        <div class="title_btn_content">
+                                            <a href="" class="tailen"><i class="fa-solid fa-chevron-left"></i></a>
+                                            <a href="" class="tailen play_all"><i class="fa-solid fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                                   <div class="playlist_set nghesi_ab" id="nghesi_set1">
+                                        <div class="row">
+                                            <div class="col-xl-3 col-lg-3">
+                                                <ul class="singer_about text-center">
+                                                    <li>
+                                                        <a href="" class="singer_about_link">
+                                                            <img src="/img/iu1.jpeg" alt="" class="singer_about_img rounded-circle">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="name_singer_about">Phương Ly</a>
+                                                    </li>
+                                                    <li>
+                                                        <p>265k quan tâm</p>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="check_quantam"><i class="fa-solid fa-check"></i> Đã quan tâm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-3">
+                                                <ul class="singer_about text-center">
+                                                    <li>
+                                                        <a href="" class="singer_about_link">
+                                                            <img src="/img/iu1.jpeg" alt="" class="singer_about_img rounded-circle">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="name_singer_about">Phương Ly</a>
+                                                    </li>
+                                                    <li>
+                                                        <p>265k quan tâm</p>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="check_quantam"><i class="fa-solid fa-check"></i> Đã quan tâm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-3">
+                                                <ul class="singer_about text-center">
+                                                    <li>
+                                                        <a href="" class="singer_about_link">
+                                                            <img src="/img/iu1.jpeg" alt="" class="singer_about_img rounded-circle">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="name_singer_about">Phương Ly</a>
+                                                    </li>
+                                                    <li>
+                                                        <p>265k quan tâm</p>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="check_quantam"><i class="fa-solid fa-check"></i> Đã quan tâm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-3">
+                                                <ul class="singer_about text-center">
+                                                    <li>
+                                                        <a href="" class="singer_about_link">
+                                                            <img src="/img/iu1.jpeg" alt="" class="singer_about_img rounded-circle">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="name_singer_about">Phương Ly</a>
+                                                    </li>
+                                                    <li>
+                                                        <p>265k quan tâm</p>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="check_quantam"><i class="fa-solid fa-check"></i> Đã quan tâm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                            <!-- ------- -->
+                            <div class="tab-pane fade" id="baihat">
+                                hi
+                            </div>
+                            <!-- ------- -->
+                            <div class="tab-pane fade" id="playlist">
+                                how are you
+                            </div>
+                            <!-- ------- -->
+                            <div class="tab-pane fade" id="abum">
+                                what time
+                            </div>
+                            <!-- ------- -->
+                            <div class="tab-pane fade" id="mv">
+                                i dont know
+                            </div>
+                            <!-- ------- -->
+                            <div class="tab-pane fade" id="nghesi">
+                                you understand
+                            </div>
+                            <!-- ------- -->
+                            <div class="tab-pane fade" id="tailen">
+                                hmmmmmm
+                            </div>
+                            <!-- ------- -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="fake"></div>
+        <div class="footer fixed-bottom">
+            <div class="footer_clt">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="song_play_info align-items-center">
+                            <a href="" class="cd_logo_song">
+                                <img src="/img/iu1.jpeg" alt="" class="img_logo_song rounded-circle">
+                            </a>
+                            <div class="song_info_detai">
+                                <div class="name_song_footer">
+                                    Cứ Chill Thôi
+                                </div>
+                                <p class="singer_song_footer">
+                                    IU
+                                </p>
+                            </div>
+                            <div class="more_func">
+                                <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4">
+                        <div class="control_play_song align-items-center">
+                            <ul class="nav_clt_playing nav justify-content-center align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav_clt_link nav-link" href="#"><i class="fa-solid fa-shuffle"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav_clt_link nav-link b25" href="#"><i
+                                            class="fa-solid fa-backward-step"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav_clt_link nav-link b30" href="#" id="btn_play_song"><i id="play_btn"
+                                            class="fa-solid fa-play"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav_clt_link nav-link b25" href="#"><i
+                                            class="fa-solid fa-forward-step"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav_clt_link nav-link" href="#"><i
+                                            class="fa-solid fa-arrow-rotate-left"></i></a>
+                                </li>
+                            </ul>
+                            <div class="process_play_song">
+                                <div class="time_start_playing">00:00</div>
+                                <input type="range" class="process_playing justify-content-center" value="20">
+                                <div class="time_end_playing">04:03</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4">
+                        <ul class="clt_play_end nav align-items-center justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link cl01" href="#"><i class="fa-solid fa-video"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link cl01" href="#"><i class="fa-solid fa-microphone"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link cl01" href="#">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                    <input type="range">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link cl01" href="#"><i class="fa-solid fa-book-medical"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/home.js"></script>
+</body>
+
+</html>
